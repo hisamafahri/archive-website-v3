@@ -11,6 +11,9 @@ import { remarkReadingTime } from "./src/utils/remark-reading-time";
 export default defineConfig({
   // ! Please remember to replace the following site property with your own domain
   site: "https://hisam.dev/",
+  redirects: {
+    "/projects": "https://github.com/hisamafahri?tab=repositories&type=source",
+  },
   markdown: {
     remarkPlugins: [remarkUnwrapImages, remarkReadingTime],
     rehypePlugins: [
