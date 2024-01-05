@@ -1,0 +1,110 @@
+---
+import PageLayout from "@/layouts/Base";
+import PostPreview from "@/components/blog/PostPreview";
+import { getAllPosts, sortMDByDate } from "@/utils";
+
+const MAX_POSTS = 10;
+const allPosts = await getAllPosts();
+const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
+---
+
+<PageLayout meta={{ title: "Home" }}>
+  <section>
+    <p class="mb-4">
+      I am an enthusiastic and curious engineer, OSS contributors for countless
+      projects, voracious reader, active (trying my best) writer.
+    </p>
+  </section>
+  <section aria-label="Blog post list" class="mt-16">
+    <h2 class="title mb-4 text-xl">Journals</h2>
+    <ul class="space-y-4 sm:space-y-2">
+      {
+        allPostsByDate.map((p) => (
+          <li class="flex flex-col gap-x-2 sm:flex-row">
+            <PostPreview post={p} />
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+  <section aria-label="Blog post list" class="mt-16">
+    <h2 class="title mb-4 text-xl">Some Things that I Believe</h2>
+    <ul class="space-y-4 sm:space-y-2">
+      <ul class="list-disc space-y-6">
+        <li>It&apos;s important to do things FAST!</li>
+        <ul class="!mt-1 ml-6 list-[circle]">
+          <li>Time is a finite resources</li>
+          <li>Time is the denominator</li>
+          <li>A week is 2% of the year</li>
+          <li>
+            Going fast makes you focus on what's important. No wasted time for
+            the unimportant
+          </li>
+        </ul>
+        <li>Enthusiasm and genuine curiosity matter</li>
+        <ul class="!mt-1 ml-6 list-[circle]">
+          <li>It&apos;s so much easier working on something that excites us</li>
+          <li>
+            It might be one of the biggest survival factors for the things that
+            we're working on
+          </li>
+        </ul>
+        <li>
+          The red string of every problem is interpersonal relationship problems
+        </li>
+        <ul class="!mt-1 ml-6 list-[circle]">
+          <li>Life is not a "competition", rather than a cooperation</li>
+          <li>
+            We are the only ones that is worrying about our looks (and of
+            course, our ideas)
+          </li>
+          <li>Admitting fault is not a defeat</li>
+        </ul>
+        <li>Smaller teams are better</li>
+        <ul class="!mt-1 ml-6 list-[circle]">
+          <li>Faster decisions, fewer meetings, more experiments, more fun</li>
+          <li>No room for mediocre people (can pay more, too!)</li>
+          <li>
+            You can do big things with small teams, but it's hard to do small
+            things with big teams. And small is often plenty. That's the power
+            of small — you do what needs to be done rather than overdoing it.
+          </li>
+        </ul>
+        <li>We should build something insanely great</li>
+        <ul class="!mt-1 ml-6 list-[circle]">
+          <li>
+            The term "MVP" is often being abused. MVP shouldn&apos;t sacrifice
+            quality
+          </li>
+          <li>
+            "This is a minimal product, so quality isn't important" is a lie
+          </li>
+          <li>
+            If you don’t have the expertise, resources, OR courage to build
+            something, then don&apos;t
+          </li>
+        </ul>
+      </ul>
+    </ul>
+  </section>
+  <!-- <section class="mt-16"> -->
+  <!--   <h2 class="title mb-4 text-xl">Technologies</h2> -->
+  <!--   <ul class="space-y-4 sm:space-y-2"> -->
+  <!--     { -->
+  <!--       cactusTech.map(({ href, title, desc }) => ( -->
+  <!--         <li> -->
+  <!--           <a -->
+  <!--             href={href} -->
+  <!--             target="_blank" -->
+  <!--             rel="noopener noreferrer" -->
+  <!--             class="cactus-link inline-block" -->
+  <!--           > -->
+  <!--             {title} -->
+  <!--           </a> -->
+  <!--           :<p class="inline-block sm:mt-2">{desc}</p> -->
+  <!--         </li> -->
+  <!--       )) -->
+  <!--     } -->
+  <!-- </ul> -->
+  <!-- </section> -->
+</PageLayout>

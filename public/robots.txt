@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hisam.dev/sitemap-index.xml
