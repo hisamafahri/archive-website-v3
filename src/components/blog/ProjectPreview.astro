@@ -1,0 +1,22 @@
+---
+type ProjectPreviewProps = {
+  link: string;
+  title: string;
+  target?: "_self" | "_blank";
+};
+
+type Props = ProjectPreviewProps;
+
+const { link, title, target = "_blank" } = Astro.props;
+---
+
+<div>
+  <a
+    href={`${link}`}
+    target={target}
+    class="cactus-link whitespace-nowrap"
+    data-astro-prefetch
+  >
+    {title}
+  </a>
+</div>

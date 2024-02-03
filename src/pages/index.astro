@@ -1,6 +1,7 @@
 ---
 import PageLayout from "@/layouts/Base";
 import PostPreview from "@/components/blog/PostPreview";
+import ProjectPreview from "@/components/blog/ProjectPreview";
 import { getAllPosts, sortMDByDate } from "@/utils";
 
 const MAX_POSTS = 10;
@@ -44,6 +45,89 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
         class="underline">Cal.com</a
       >.
     </p>
+  </section>
+  <section aria-label="Projects list" class="mt-16">
+    <h2 class="title mb-4 text-xl">Crafts</h2>
+    <div class="grid w-full grid-cols-2 grid-rows-2 gap-2 sm:grid-cols-5">
+      <ProjectPreview
+        title="MyPocket"
+        link="https://github.com/hisamafahri/mypocket"
+      />
+      <ProjectPreview
+        title="CodeFly"
+        link="https://github.com/hisamafahri/codefly"
+      />
+      <ProjectPreview
+        title="ngoding.org"
+        link="https://github.com/ngodingorg/ngodingorg"
+      />
+      <ProjectPreview title="coco" link="https://github.com/hisamafahri/coco" />
+      <ProjectPreview
+        title="create-min-app"
+        link="https://github.com/hisamafahri/create-min-app"
+      />
+      <ProjectPreview
+        title="samstack"
+        link="https://github.com/hisamafahri/samstack"
+      />
+      <ProjectPreview
+        title="tulkit"
+        link="https://github.com/hisamafahri/tulkit"
+      />
+      <ProjectPreview title="nit" link="https://github.com/hisamafahri/nit" />
+      <ProjectPreview
+        title="editr"
+        link="https://github.com/hisamafahri/editr"
+      />
+      <ProjectPreview
+        title="music-notes"
+        link="https://github.com/hisamafahri/music-notes"
+      />
+      <ProjectPreview title="noted" link="https://notes.hisam.dev" />
+      <ProjectPreview
+        title="wipe-for-you"
+        link="https://github.com/hisamafahri/wipe-for-you"
+      />
+    </div>
+    <h2 class="title mb-4 mt-12 text-xl">Experimental</h2>
+    <div class="grid w-full grid-cols-2 grid-rows-2 gap-2 sm:grid-cols-5">
+      <ProjectPreview
+        title="runsam.js"
+        link="https://github.com/hisamafahri/runsamjs"
+      />
+      <ProjectPreview title="cyg" link="https://github.com/hisamafahri/cyg" />
+      <ProjectPreview
+        title="letta"
+        link="https://github.com/hisamafahri/letta"
+      />
+      <ProjectPreview
+        title="todomi"
+        link="https://github.com/hisamafahri/todomi"
+      />
+      <ProjectPreview
+        title="edgest-hono"
+        link="https://github.com/hisamafahri/edgest-hono"
+      />
+      <ProjectPreview
+        title="edgest-trpc"
+        link="https://github.com/hisamafahri/edgest-trpc"
+      />
+      <ProjectPreview
+        title="httop"
+        link="https://github.com/hisamafahri/httop"
+      />
+      <ProjectPreview
+        title="dockoo"
+        link="https://github.com/hisamafahri/dockoo"
+      />
+      <ProjectPreview title="tnkb" link="https://github.com/hisamafahri/tnkb" />
+    </div>
+    <div class="mt-8">
+      <ProjectPreview
+        title="And many more..."
+        link="https://github.com/hisamafahri"
+      />
+    </div>
   </section>
   <section aria-label="Blog post list" class="mt-16">
     <h2 class="title mb-4 text-xl">Journals</h2>
