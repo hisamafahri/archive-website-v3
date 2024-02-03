@@ -10,9 +10,9 @@
       "@/utils": ["src/utils/index.ts"],
       "@/stores/*": ["src/stores/*"],
       "@/types": ["src/types.ts"],
-      "@/site-config": ["src/site.config.ts"]
-    }
+      "@/site-config": ["src/site.config.ts"],
+    },
   },
   "include": ["src", "*.ts"],
-  "exclude": ["node_modules", "**/node_modules/*", ".vscode", "dist"]
+  "exclude": ["node_modules", "**/node_modules/*", ".vscode", "dist"],
 }
