@@ -4,7 +4,7 @@ export const siteConfig: SiteConfig = {
   // Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
   author: "Hisam Fahri",
   // Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
-  title: "Hisam Fahri Personal Site",
+  title: "Hisam's",
   // Meta property used as the default description meta property
   description:
     "Enthusiastic and curious engineer. OSS contributors for countless projects. Voracious reader. Active (trying my best) writer.",
